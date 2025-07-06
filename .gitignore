@@ -1,5 +1,6 @@
 # Ignore environment variables and sensitive files
 .env
+custom-instructions.md
 
 # Node modules
 node_modules/
