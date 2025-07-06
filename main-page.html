@@ -9,6 +9,12 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 
+    <!-- Icon Library -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -19,15 +25,6 @@
   <script defer src="js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Icon Library -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-pIcK+O1pGjvQ+z3g+6nRhkqYGwM0O1oEw1FvpG3H1t2jG4gM0KF7tVUtRmPj+zW9zXso+h3z9qvWUS+oP4i9cw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
 </head>
 
 <body>
@@ -36,14 +33,15 @@
   <!-- Social Media Sidebar -->
 <aside class="social-sidebar">
   <ul>
-    <li><a href="https://github.com/martinedb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-    <li><a href="mailto:edwinibon90210@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/martineb/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-    <li><a href="https://medium.com/@martinbonsu" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a></li>
-    <li><a href="https://linktr.ee/martinbonsu" target="_blank" aria-label="Linktree"><i class="fas fa-link"></i></a></li>
-    <li><a href="https://www.youtube.com/@martinedwini-bonsu3767" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+    <li><a href="https://github.com/martinedb" target="_blank" aria-label="GitHub" data-tooltip="GitHub Profile"><i class="fab fa-github"></i></a></li>
+    <li><a href="mailto:edwinibon90210@gmail.com" aria-label="Email" data-tooltip="Send me an email"><i class="fas fa-envelope"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/martineb/" target="_blank" aria-label="LinkedIn" data-tooltip="LinkedIn Profile"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="https://medium.com/@martinbonsu" target="_blank" aria-label="Medium" data-tooltip="Read my Medium articles"><i class="fab fa-medium"></i></a></li>
+    <li><a href="https://linktr.ee/martinbonsu" target="_blank" aria-label="Linktree" data-tooltip="My Linktree"><i class="fas fa-link"></i></a></li>
+    <li><a href="https://www.youtube.com/@martinedwini-bonsu3767" target="_blank" aria-label="YouTube" data-tooltip="Watch my YouTube"><i class="fab fa-youtube"></i></a></li>
   </ul>
 </aside>
+
 
   <header class="top-header">
     <div class="site-name">Martin Edwini-Bonsu</div>
@@ -83,6 +81,14 @@
       Engineering Ambassador | CHBE Student Representative | Writer
     </p>
     <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
+    <div class="hero-buttons">
+      <a href="assets/Martin_Edwini-Bonsu_Resume.pdf" class="hero-btn" download>
+        <i class="fas fa-file-download"></i> Download Resume
+      </a>
+      <a href="#projects" class="hero-btn">
+        <i class="fas fa-folder-open"></i> View Projects
+      </a>
+    </div>
   </section>
 
   <!-- Scroll Prompt -->

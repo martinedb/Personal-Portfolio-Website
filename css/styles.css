@@ -8,13 +8,13 @@
 
 body {
   margin: 0;
+  padding-top: 70px; /* offset for fixed header */
   font-family: 'Quicksand', sans-serif;
   background: var(--bg-gradient);
   color: var(--text-dark);
   line-height: 1.75;
   scroll-behavior: smooth;
   transition: background 0.5s ease, color 0.5s ease;
-  padding-top: 70px; /* Offset for fixed header */
 }
 
 /* === Fixed Top Header === */
@@ -29,8 +29,8 @@ body {
   justify-content: space-between;
   padding: 0 2rem;
   background: var(--bg-gradient);
-  z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 .site-name {
@@ -48,24 +48,7 @@ body {
   padding: 0;
 }
 
-.navbar-links li a {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.navbar-links li a:hover,
-.navbar-links li a:focus {
-  color: var(--highlight);
-}
-
-/* === Dropdown Menu Styles === */
-.dropdown {
-  position: relative;
-}
-
+.navbar-links li a,
 .dropbtn {
   cursor: pointer;
   user-select: none;
@@ -76,6 +59,19 @@ body {
   padding: 0;
   border: none;
   background: none;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus,
+.dropbtn:hover,
+.dropbtn:focus {
+  color: var(--highlight);
+}
+
+/* === Dropdown Menu Styles === */
+.dropdown {
+  position: relative;
 }
 
 .dropdown-content {
@@ -170,8 +166,7 @@ body {
 
 /* === Scroll Callout Section === */
 .scroll-callout {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   text-align: center;
   font-size: 1.2rem;
   color: var(--text-light);
@@ -233,6 +228,7 @@ main {
 }
 
 .social-sidebar a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -242,8 +238,9 @@ main {
   border: 2px solid var(--accent);
   border-radius: 50%;
   color: var(--accent);
-  transition: background 0.3s, color 0.3s;
   font-size: 1.25rem;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
 /* Hover/focus states */
@@ -253,3 +250,76 @@ main {
   color: white;
   outline: none;
 }
+
+/* Tooltip styling */
+.social-sidebar a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 110%;  /* position tooltip just to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Tooltip arrow */
+.social-sidebar a::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Show tooltip on hover/focus */
+.social-sidebar a:hover::after,
+.social-sidebar a:focus::after,
+.social-sidebar a:hover::before,
+.social-sidebar a:focus::before {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(5px);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(186, 104, 200, 0.4);
+  transition: background 0.3s;
+  border: none;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background: var(--highlight);
+  color:
