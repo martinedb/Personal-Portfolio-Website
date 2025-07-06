@@ -1,3 +1,230 @@
+/* --- Contact Form Heading and Button Modernization --- */
+.contact-title-main {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.01em;
+  margin-top: -0.8em;
+}
+
+.contact-btn-modern {
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  border-radius: 30px;
+  padding: 0.8em 2.3em;
+  background: linear-gradient(90deg, var(--accent) 60%, var(--highlight) 100%);
+  box-shadow: 0 6px 18px rgba(186, 104, 200, 0.13);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.contact-btn-modern:hover,
+.contact-btn-modern:focus {
+  background: linear-gradient(90deg, var(--highlight) 60%, var(--accent) 100%);
+  color: #fff;
+  outline: none;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.contact-info {
+  margin-top: -0.2rem;
+  margin-bottom: 0.2rem;
+  padding-top: 1.1rem;
+}
+/* --- Contact Form Enhancements --- */
+.contact-intro {
+  font-size: 1.13rem;
+  color: var(--text-light);
+  margin-bottom: 2.2rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.contact-flex-row {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 420px;
+  background: #f9f6fd;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(186, 104, 200, 0.10), 0 1.5px 4px rgba(123, 31, 162, 0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  font-size: 1.08rem;
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.contact-info h3 {
+  font-size: 1.13rem;
+  color: var(--accent);
+  margin-bottom: 0.7em;
+  font-weight: 700;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-size: 1.05rem;
+}
+.contact-info i {
+  color: var(--accent);
+  font-size: 1.15em;
+}
+.contact-info a {
+  color: var(--highlight);
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-info a:hover,
+.contact-info a:focus {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .contact-flex-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .contact-info {
+    max-width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 0.7rem;
+  }
+}
+/* === Contact Form Section === */
+.contact-section {
+  max-width: 1000px;
+  margin: 4rem auto 3rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(186, 104, 200, 0.10), 0 1.5px 4px rgba(123, 31, 162, 0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.form-group.full-width {
+  flex-basis: 100%;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.4em;
+  font-size: 1.05rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 1.05rem;
+  padding: 0.7em 1em;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  background: #f9f6fd;
+  color: var(--text-dark);
+  margin-bottom: 0.2em;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--highlight);
+  outline: none;
+  box-shadow: 0 0 0 2px #e1bee7;
+}
+
+.contact-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(186, 104, 200, 0.18);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: var(--highlight);
+  color: #fff;
+  outline: none;
+  transform: translateY(-2px) scale(1.04);
+}
+
+#form-status {
+  min-height: 1.5em;
+  font-size: 1.05rem;
+  margin-top: 0.5em;
+}
+
+/* Responsive Contact Form */
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 0.6em 0.7em;
+  }
+}
 :root {
   --bg-gradient: linear-gradient(to right, #fce4ec, #e1f5fe);
   --accent: #ba68c8;
@@ -745,14 +972,14 @@ body {
 }
 /* ——— Endorsements Text Formatting Fix ——— */
 .endorsement-quote {
-  /* ensure natural wrapping without extra gaps */
-  white-space: normal !important;
-  word-break: normal !important;
-  overflow-wrap: anywhere !important;
-  line-height: 1.5 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block !important;
+
+  line-height: 1.2; /* adjust line-height to reduce spacing */
+  margin: 0; /* ensure no margins are introducing gaps */
+  padding: 0; /* ensure no padding is introducing gaps */
+  display: block; /* ensure display property is set correctly */
+  white-space: pre-line; /* alternative to nowrap, allows line breaks */
+  word-break: normal; /* reset word-break to normal behavior */
+  overflow-wrap: normal; /* reset overflow-wrap to normal behavior */
 }
 
 /* completely remove manual <br> breaks inside endorsements */
@@ -766,6 +993,7 @@ body {
   max-width: 1200px;
   padding: 0 1rem;
   text-align: center;
+  margin-top: 0px;
 }
 
 .endorsements-title {
@@ -800,7 +1028,7 @@ padding: 2.5rem 2.2rem 2rem 2.2rem;
 min-width: 320px;
 max-width: 600px;
 width: 100%;
-min-height: 220px;
+min-height: 320px;
 max-height: none;
 display: flex;
 flex-direction: column;
@@ -866,7 +1094,7 @@ white-space: normal;
 .endorsement-card .rec-text {
 font-size: 0.97rem;
 color: var(--text-dark);
-margin-top: 0.7rem;
+margin-top: 0.4rem;
 font-style: italic;
 word-break: break-word;
 white-space: normal;
@@ -875,7 +1103,7 @@ box-sizing: border-box;
 text-align: left;
 width: 100%;
 max-width: 100%;
-line-height: 1.6;
+line-height: 1.4;
 padding: 0;
 }
 
@@ -942,12 +1170,17 @@ padding: 0;
 
 .endorsement-quote {
   font-size: 1.08rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 1.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
   color: var(--text-dark);
   position: relative;
   z-index: 1;
+}
+
+/* Remove top margin from first child in .endorsement-card to prevent extra spacing */
+.endorsement-card > *:first-child {
+  margin-top: -40px !important;
 }
 
 .quote-mark {
@@ -1038,7 +1271,7 @@ padding: 0;
   outline: 2px solid var(--highlight);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .endorsements-carousel-outer {
     gap: 0.3rem;
     max-width: 100vw;
@@ -1052,6 +1285,10 @@ padding: 0;
     border-radius: 10px;
     font-size: 0.96rem;
     min-height: 120px;
+  }
+
+  .endorsements-section{
+    margin-top: 1rem;
   }
 }
 
