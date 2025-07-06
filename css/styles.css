@@ -192,113 +192,199 @@ main {
   --text-light: #bbb;
 }
 
-/* === Social Sidebar === */
+/* --- Enhanced Interests & Activities Section --- */
+.interests-activities-section {
+  margin: 3rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.interests-activities-container {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.interests-activities-column {
+  flex: 1 1 0;
+  min-width: 260px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.interest-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(186, 104, 200, 0.10), 0 1.5px 4px rgba(123, 31, 162, 0.07);
+  padding: 1.1rem 1.2rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+  cursor: default;
+  border-left: 5px solid var(--accent);
+  opacity: 0.97;
+}
+
+.interest-card i {
+  color: var(--accent);
+  font-size: 1.2em;
+}
+
+.interest-card:hover, .interest-card:focus {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(123, 31, 162, 0.13), 0 2px 8px rgba(186, 104, 200, 0.13);
+  background: var(--bg-gradient);
+  color: var(--accent);
+}
+
+.divider-vertical {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent) 0%, #fff 100%);
+  min-height: 320px;
+  align-self: stretch;
+  border-radius: 2px;
+  margin: 0 1.5rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  .interests-activities-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+  .divider-vertical {
+    display: none;
+  }
+}
+
+/* --- Social Sidebar with Pink Line and No Overlap --- */
 .social-sidebar {
   position: fixed;
   top: 50%;
-  left: 1rem;
+  left: 0;
+  width: 70px; /* Reserve space for sidebar and line */
+  height: auto;
   transform: translateY(-50%);
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; /* Prevents accidental overlap clicks */
+}
+
+.social-sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  pointer-events: auto; /* Allow interaction with icons */
+}
+
+.social-sidebar-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  z-index: 0;
+  transform: translateX(-50%);
+  opacity: 0.6;
 }
 
 .social-sidebar ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  position: relative;
-}
-
-/* Vertical connecting line */
-.social-sidebar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: var(--accent);
-  transform: translateX(-50%);
-}
-
-/* Each icon container */
-.social-sidebar li {
-  margin: 1rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
   position: relative;
   z-index: 1;
 }
 
-.social-sidebar a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: white;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  color: var(--accent);
-  font-size: 1.25rem;
-  transition: background 0.3s, color 0.3s;
-  text-decoration: none;
+.social-sidebar li {
+  margin: 0;
+  padding: 0;
 }
 
-/* Hover/focus states */
+.social-sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(186, 104, 200, 0.12);
+  color: var(--accent);
+  font-size: 1.5rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+  position: relative;
+}
+
 .social-sidebar a:hover,
 .social-sidebar a:focus {
   background: var(--accent);
-  color: white;
+  color: #fff;
+  transform: translateY(-2px) scale(1.08);
   outline: none;
 }
 
-/* Tooltip styling */
-.social-sidebar a::after {
+.social-sidebar a[data-tooltip]:hover::after,
+.social-sidebar a[data-tooltip]:focus::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 110%;  /* position tooltip just to the right */
+  left: 120%;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--accent);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
+  background: #fff;
+  color: var(--accent);
+  padding: 0.3em 0.8em;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(186, 104, 200, 0.13);
   white-space: nowrap;
-  font-size: 0.875rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 0.98rem;
   z-index: 10;
 }
 
-/* Tooltip arrow */
-.social-sidebar a::before {
-  content: "";
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 5px solid transparent;
-  border-left-color: var(--accent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 10;
+@media (max-width: 900px) {
+  .social-sidebar {
+    display: none;
+  }
 }
 
-/* Show tooltip on hover/focus */
-.social-sidebar a:hover::after,
-.social-sidebar a:focus::after,
-.social-sidebar a:hover::before,
-.social-sidebar a:focus::before {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(-50%) translateX(5px);
+/* Prevent main content from being overlapped by sidebar */
+body {
+  padding-left: 70px; /* Same as .social-sidebar width */
 }
 
+@media (max-width: 900px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+/* --- Hero Buttons: Restore horizontal, pill-shaped, and icon spacing --- */
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   justify-content: center;
   margin-top: 1.5rem;
 }
@@ -306,20 +392,28 @@ main {
 .hero-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   background: var(--accent);
   color: white;
   font-weight: 600;
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
-  font-size: 1rem;
-  box-shadow: 0 5px 15px rgba(186, 104, 200, 0.4);
-  transition: background 0.3s;
+  font-size: 1.08rem;
+  box-shadow: 0 5px 15px rgba(186, 104, 200, 0.18);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
   border: none;
+  cursor: pointer;
+}
+
+.hero-btn i {
+  font-size: 1.2em;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--highlight);
-  color:
+  color: #fff;
+  outline: none;
+  transform: translateY(-2px) scale(1.04);
+}
