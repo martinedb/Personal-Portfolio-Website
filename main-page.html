@@ -1,30 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Martin Edwini-Bonsu | Portfolio </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Edwini-Bonsu | Portfolio</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="css/styles.css" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
 
-<!-- Script -->
-<script defer src="js/main.js"></script>
+  <!-- AOS Scroll Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- JavaScript -->
+  <script defer src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Icon Library -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-pIcK+O1pGjvQ+z3g+6nRhkqYGwM0O1oEw1FvpG3H1t2jG4gM0KF7tVUtRmPj+zW9zXso+h3z9qvWUS+oP4i9cw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 
 </head>
+
 <body>
-    <header id="header">
-  <div class="logo" aria-label="Personal logo or initials" tabindex="0">MRTN</div>
-  
-  <h1 tabindex="0">Martin’s Portfolio</h1>
+  <!-- Header + Navbar -->
 
-  <p tabindex="0">Soft design for serious impact — engineering, advocacy, and digital tools.</p>
+  <!-- Social Media Sidebar -->
+<aside class="social-sidebar">
+  <ul>
+    <li><a href="https://github.com/martinedb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+    <li><a href="mailto:edwinibon90210@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/martineb/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="https://medium.com/@martinbonsu" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a></li>
+    <li><a href="https://linktr.ee/martinbonsu" target="_blank" aria-label="Linktree"><i class="fas fa-link"></i></a></li>
+    <li><a href="https://www.youtube.com/@martinedwini-bonsu3767" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+  </ul>
+</aside>
 
-  <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
-</header>
+  <header class="top-header">
+    <div class="site-name">Martin Edwini-Bonsu</div>
 
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+          <a href="#about" class="dropbtn">About</a>
+          <div class="dropdown-content">
+            <a href="#skills">Skills</a>
+            <a href="#activities">Activities</a>
+            <a href="#interests">Interests</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#experience" class="dropbtn">Work</a>
+          <div class="dropdown-content">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
+          </div>
+        </li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" data-aos="fade-in">
+    <div class="logo" tabindex="0">MARTIN EDWINI-BONSU</div>
+    <h1 tabindex="0">Martin’s Portfolio</h1>
+    <p tabindex="0">
+      UBC Chemical Engineering Student | Urban Water and Wastewater Treatment Co-op Student | Data Analyst |
+      Engineering Ambassador | CHBE Student Representative | Writer
+    </p>
+    <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
+  </section>
+
+  <!-- Scroll Prompt -->
+  <section class="scroll-callout" data-aos="fade-up">
+    <p>↓ Scroll to explore more</p>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me -->
+    <section id="about" data-aos="fade-up" tabindex="0">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I’m Martin, a chemical engineering student with a passion for creative problem-solving, sustainability, and
+        public policy.
+        This soft pastel space reflects my personal approach to work — technically sharp, emotionally grounded, and
+        always human-centered.
+        Whether I’m writing articles, analyzing water treatment systems, or building interactive tools, I strive to
+        connect logic and empathy.
+      </p>
+    </section>
+  </main>
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
 </body>
+
 </html>

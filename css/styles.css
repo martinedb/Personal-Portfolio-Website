@@ -1,0 +1,255 @@
+:root {
+  --bg-gradient: linear-gradient(to right, #fce4ec, #e1f5fe);
+  --accent: #ba68c8;
+  --highlight: #7b1fa2;
+  --text-dark: #3e3e3e;
+  --text-light: #6f6f6f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+  line-height: 1.75;
+  scroll-behavior: smooth;
+  transition: background 0.5s ease, color 0.5s ease;
+  padding-top: 70px; /* Offset for fixed header */
+}
+
+/* === Fixed Top Header === */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--bg-gradient);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.site-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* === Navigation Bar === */
+.navbar-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus {
+  color: var(--highlight);
+}
+
+/* === Dropdown Menu Styles === */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  user-select: none;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1001;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background: var(--bg-gradient);
+  color: var(--accent);
+}
+
+/* Show dropdown on hover and focus-within */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--accent);
+  padding: 0.2rem 0.75rem;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0;
+}
+
+#darkToggle {
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(186, 104, 200, 0.4);
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+#darkToggle:hover,
+#darkToggle:focus {
+  background: var(--highlight);
+  outline: none;
+}
+
+/* === Scroll Callout Section === */
+.scroll-callout {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* === Main Content === */
+main {
+  padding: 2rem 1rem;
+}
+
+/* === Dark Mode Variables === */
+.dark-mode {
+  --bg-gradient: linear-gradient(to right, #1a1a2e, #16213e);
+  --accent: #bb86fc;
+  --highlight: #bb86fc;
+  --text-dark: #eee;
+  --text-light: #bbb;
+}
+
+/* === Social Sidebar === */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Vertical connecting line */
+.social-sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+
+/* Each icon container */
+.social-sidebar li {
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.social-sidebar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  transition: background 0.3s, color 0.3s;
+  font-size: 1.25rem;
+}
+
+/* Hover/focus states */
+.social-sidebar a:hover,
+.social-sidebar a:focus {
+  background: var(--accent);
+  color: white;
+  outline: none;
+}
