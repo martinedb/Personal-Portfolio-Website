@@ -1,0 +1,47 @@
+/* writing-portfolio.css - Styles for writing portfolio cards and categories */
+.writing-category { margin-bottom: 2.5rem; }
+.writing-category-title { font-size: 1.5rem; margin-bottom: 1rem; }
+.article-cards { display: flex; flex-wrap: wrap; gap: 2rem; }
+.article-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px rgba(186,104,200,0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 280px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  animation: fadeInUp 0.7s;
+}
+.article-card:hover, .article-card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(186,104,200,0.18);
+  z-index: 2;
+}
+.article-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.article-desc { font-size: 1rem; margin-bottom: 1.2rem; }
+.read-article-btn {
+  background: #ba68c8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.read-article-btn:hover, .read-article-btn:focus { background: #8e24aa; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}

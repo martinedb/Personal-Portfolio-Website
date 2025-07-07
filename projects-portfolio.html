@@ -1,0 +1,64 @@
+<!-- projects-portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects Portfolio | Martin Edwini-Bonsu</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/projects-portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- projects-portfolio.css handles all custom styles -->
+</head>
+<body>
+  <!-- Header + Navbar (copy from main-page.html) -->
+  <header class="top-header">
+    <div class="site-name">Martin Edwini-Bonsu</div>
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="projects-portfolio.html">Projects</a></li>
+        <li><a href="work-experience.html">Work Experience</a></li>
+        <li><a href="writing-portfolio.html">Writing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="section-title" style="margin-top:2rem;">Projects Portfolio</h1>
+    <div class="projects-grid">
+      <!-- Project Card Template -->
+      <div class="project-flip-card" tabindex="0" aria-label="Project Title">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="project-title">Project Title</div>
+            <div class="project-subtitle">Project Subtitle</div>
+            <div class="project-desc">Short summary of the project.</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="project-details">
+              <strong>Context / Objective:</strong> <br>
+              <span>[Insert context/objective]</span><br><br>
+              <strong>Skills Developed / Gained:</strong> <br>
+              <span>[Insert skills]</span><br><br>
+              <strong>Actions:</strong>
+              <ul>
+                <li>[Insert action #1]</li>
+                <li>[Insert action #2]</li>
+              </ul>
+              <strong>Outcome:</strong> <br>
+              <span>[Insert outcome]</span><br>
+              <div class="project-links">
+                <a href="#" class="project-link-btn" target="_blank">Additional Link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate the above .project-flip-card for more projects -->
+    </div>
+</main>
+<script src="js/projects-portfolio.js"></script>
+</body>
+</html>
