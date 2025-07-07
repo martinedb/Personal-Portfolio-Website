@@ -1,4 +1,8 @@
 /* writing-portfolio.css - Styles for writing portfolio cards and categories */
+body{
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
 .writing-category { margin-bottom: 2.5rem; }
 .writing-category-title { font-size: 1.5rem; margin-bottom: 1rem; }
 .article-cards { display: flex; flex-wrap: wrap; gap: 2rem; }
@@ -44,4 +48,116 @@
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: none;}
+}
+
+.section-title {
+    margin-top:2rem;
+}
+
+/* --- Enhanced Filter Bar and Search Styling (Site Theme) --- */
+.writing-filter-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #f3e5f5 60%, #ede7f6 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(186,104,200,0.08);
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+}
+.filter-btns-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.filter-btn, .reset-btn {
+  background: linear-gradient(90deg, #ba68c8 60%, #8e24aa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7em 1.7em;
+  font-size: 1.08rem;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(186,104,200,0.10);
+  transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.18s;
+  outline: none;
+  position: relative;
+  letter-spacing: 0.01em;
+  border: 2px solid transparent;
+}
+.filter-btn.active, .filter-btn[aria-pressed="true"], .reset-btn.active {
+  background: linear-gradient(90deg, #8e24aa 60%, #ba68c8 100%);
+  color: #fff;
+  transform: scale(1.09);
+  box-shadow: 0 4px 18px rgba(186,104,200,0.18);
+  border: 2px solid #ba68c8;
+}
+.filter-btn:active, .reset-btn:active {
+  transform: scale(0.96);
+}
+.filter-btn:focus-visible, .reset-btn:focus-visible {
+  box-shadow: 0 0 0 3px #ba68c8aa;
+  border: 2px solid #8e24aa;
+}
+.reset-btn {
+  margin-left: 0.7em;
+  font-weight: 700;
+  /* Same gradient as filter buttons for uniformity */
+  background: linear-gradient(90deg, #ba68c8 60%, #8e24aa 100%);
+  color: #fff;
+  border: 2px solid #ba68c8;
+}
+.reset-btn:hover, .reset-btn:focus {
+  background: linear-gradient(90deg, #8e24aa 60%, #ba68c8 100%);
+  color: #fff;
+  border-color: #8e24aa;
+}
+.search-bar-row {
+  margin-top: 0.2em;
+  width: 100%;
+}
+.article-search {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.7em 1.2em;
+  border-radius: 999px;
+  border: 2px solid #ba68c8;
+  font-size: 1.08rem;
+  outline: none;
+  background: #f8f6fa;
+  color: #6a1b9a;
+  font-weight: 600;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+  box-shadow: 0 1px 6px rgba(186,104,200,0.07);
+}
+.article-search:focus {
+  border-color: #8e24aa;
+  box-shadow: 0 0 0 2px #ba68c8aa;
+  background: #fff;
+}
+
+/* --- Article Cards Grid --- */
+.writing-articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.writing-articles-grid .article-card {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .writing-articles-grid {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .filter-btns-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
