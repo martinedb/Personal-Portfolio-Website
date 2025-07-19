@@ -1,13 +1,43 @@
 /* work-experience.css - Styles for work experience flip cards */
-.work-grid { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  color: #555;
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #ba68c8;
+  display: inline-block;
+  font-weight: 600;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+  padding: 1rem 0;
+}
+
 .work-flip-card {
   background: none;
   border: none;
   perspective: 1200px;
-  width: 350px;
-  height: 320px;
+  width: 100%;
+  min-height: 280px;
   margin: 0;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-flip-card:hover {
+  transform: translateY(-5px);
 }
 .flip-card-inner {
   position: relative;
@@ -27,12 +57,51 @@
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   display: flex; flex-direction: column; justify-content: center;
 }
-.flip-card-front { z-index: 2;}
-.flip-card-back { transform: rotateY(180deg);}
-.work-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;}
-.work-role { font-size: 1rem; color: #888; margin-bottom: 1rem;}
-.work-desc { font-size: 1rem; margin-bottom: 1rem;}
-.work-details { font-size: 0.97rem; }
+.flip-card-front { 
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.flip-card-back { 
+  transform: rotateY(180deg);
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.work-title { 
+  font-size: 1.3rem; 
+  font-weight: 700; 
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.work-role { 
+  font-size: 1.1rem; 
+  color: #666; 
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.work-location, .work-duration {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.work-desc { 
+  font-size: 1rem; 
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.work-details { 
+  font-size: 0.97rem; 
+  line-height: 1.6;
+}
 .work-links { margin-top: 1rem;}
 .work-link-btn {
   background: #ba68c8;
