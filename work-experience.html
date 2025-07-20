@@ -8,17 +8,56 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/work-experience.css" />
   <!-- work-experience.css handles all custom styles -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- AOS Scroll Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- JavaScript -->
+  <script defer src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
-  <!-- Header + Navbar (copy from main-page.html) -->
+  <!-- Social Media Sidebar -->
+  <aside class="social-sidebar">
+    <div class="social-sidebar-inner">
+      <div class="social-sidebar-line"></div>
+      <ul>
+        <li><a href="https://github.com/martinedb" target="_blank" rel="noopener" aria-label="GitHub" data-tooltip="GitHub Profile"><i class="fab fa-github"></i></a></li>
+        <li><a href="mailto:edwinibon90210@gmail.com" aria-label="Email" data-tooltip="Send me an email"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/martineb/" target="_blank" rel="noopener" aria-label="LinkedIn" data-tooltip="LinkedIn Profile"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://calendly.com/edwinibon90210" target="_blank" rel="noopener" aria-label="Calendly" data-tooltip="Book a meeting with me!"><i class="far fa-calendar-alt"></i></a></li>
+        <li><a href="https://medium.com/@martinbonsu" target="_blank" rel="noopener" aria-label="Medium" data-tooltip="Read my Medium articles"><i class="fab fa-medium"></i></a></li>
+        <li><a href="https://linktr.ee/martinbonsu" target="_blank" rel="noopener" aria-label="Linktree" data-tooltip="My Linktree"><i class="fas fa-link"></i></a></li>
+        <li><a href="https://www.youtube.com/@martinedwini-bonsu3767" target="_blank" rel="noopener" aria-label="YouTube" data-tooltip="Watch my YouTube"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Header + Navbar -->
   <header class="top-header">
     <div class="site-name">Martin Edwini-Bonsu</div>
     <nav class="navbar">
       <ul class="navbar-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="projects-portfolio.html">Projects</a></li>
-        <li><a href="work-experience.html">Work Experience</a></li>
-        <li><a href="writing-portfolio.html">Writing</a></li>
+        <li><a href="main-page.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#about" class="dropbtn">About</a>
+          <div class="dropdown-content">
+            <a href="#skills">Skills</a>
+            <a href="#activities">Activities</a>
+            <a href="#interests">Interests</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#experience" class="dropbtn">Work</a>
+          <div class="dropdown-content">
+            <a href="work-experience.html">Experience</a>
+            <a href="projects-portfolio.html">Projects</a>
+            <a href="writing-portfolio.html">Articles</a>
+          </div>
+        </li>
+        <li><a href="#awards">Awards</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
