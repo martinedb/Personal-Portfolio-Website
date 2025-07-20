@@ -1,0 +1,63 @@
+/* Contact Page Specific Styles */
+.calendly-booking {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.calendly-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #2c3e50; /* Darker blue that matches the site's theme */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.calendly-btn:hover {
+  background-color: #34495e; /* Slightly lighter on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.calendly-btn i {
+  font-size: 18px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.calendly-btn:hover i {
+  transform: scale(1.1);
+}
+
+.calendly-btn span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendly-btn {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+  
+  .calendly-logo {
+    width: 18px;
+    height: 18px;
+  }
+}
