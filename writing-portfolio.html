@@ -65,57 +65,26 @@
 
   <main>
     <h1 class="section-title">Writing Portfolio</h1>
-    <!-- Filter Bar + Search -->
+    <!-- Filter Bar -->
     <nav class="writing-filter-bar" aria-label="Filter articles by category">
       <div class="filter-btns-row">
-        <button class="filter-btn" data-category="career" aria-pressed="false">Career Development and Mentorship</button>
-        <button class="filter-btn" data-category="productivity" aria-pressed="false">Productivity &amp; Tools</button>
-        <button class="filter-btn" data-category="sustainability" aria-pressed="false">Sustainability</button>
-        <button class="filter-btn" data-category="engineering" aria-pressed="false">Engineering</button>
-        <button class="filter-btn" data-category="natural-resources" aria-pressed="false">Natural Resources</button>
-        <button class="filter-btn" data-category="education" aria-pressed="false">Education &amp; Student Life</button>
-        <button class="filter-btn" data-category="policy" aria-pressed="false">Policy</button>
-        <button class="reset-btn" type="button">Show All</button>
+        <button class="filter-btn active" data-tag="all">All Articles</button>
+        <button class="filter-btn" data-tag="Career Development">Career Development</button>
+        <button class="filter-btn" data-tag="Sustainability">Sustainability</button>
+        <button class="filter-btn" data-tag="Engineering">Engineering</button>
+        <button class="filter-btn" data-tag="Artificial Intelligence">AI & Tech</button>
+        <button class="filter-btn" data-tag="Education">Education</button>
       </div>
-      <div class="search-bar-row">
-        <input type="text" class="article-search" placeholder="Search articles by title..." aria-label="Search articles by title">
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="article-search" placeholder="Search articles..." aria-label="Search articles">
       </div>
     </nav>
-    <!-- Articles Grid -->
-    <section class="writing-articles-grid" aria-live="polite">
-      <!-- Example Article Cards (replace with your real articles) -->
-      <a class="article-card" href="https://example.com/article1" target="_blank" rel="noopener" 
-         data-categories="career,productivity">
-        <div class="article-title">How to Build a Career in Engineering</div>
-        <div class="article-desc">Tips and mentorship advice for students and early-career professionals.</div>
-        <span class="read-article-btn">Read Article</span>
-      </a>
-      <a class="article-card" href="https://example.com/article2" target="_blank" rel="noopener" 
-         data-categories="sustainability,engineering,natural-resources">
-        <div class="article-title">Sustainable Engineering Practices</div>
-        <div class="article-desc">Exploring the intersection of engineering and sustainability in natural resources.</div>
-        <span class="read-article-btn">Read Article</span>
-      </a>
-      <a class="article-card" href="https://example.com/article3" target="_blank" rel="noopener" 
-         data-categories="education,career">
-        <div class="article-title">Mentorship in Student Life</div>
-        <div class="article-desc">How mentorship programs can shape student success and career development.</div>
-        <span class="read-article-btn">Read Article</span>
-      </a>
-      <a class="article-card" href="https://example.com/article4" target="_blank" rel="noopener" 
-         data-categories="policy,education">
-        <div class="article-title">Policy Changes in Higher Education</div>
-        <div class="article-desc">A look at recent policy shifts and their impact on students and educators.</div>
-        <span class="read-article-btn">Read Article</span>
-      </a>
-      <a class="article-card" href="https://example.com/article5" target="_blank" rel="noopener" 
-         data-categories="productivity">
-        <div class="article-title">Top Productivity Tools for 2025</div>
-        <div class="article-desc">A roundup of the best tools to boost your productivity this year.</div>
-        <span class="read-article-btn">Read Article</span>
-      </a>
-      <!-- Add more article cards as needed, using data-categories to list all relevant categories for each article -->
-    </section>
+
+    <!-- Articles Container -->
+    <div class="articles-container">
+      <!-- Articles will be dynamically inserted here by JavaScript -->
+    </div>
     
     <!-- Footer -->
     <link rel="stylesheet" href="css/footer.css" />
@@ -144,6 +113,26 @@
       </div>
     </footer>
   </main>
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
   <script src="js/writing-portfolio.js"></script>
+  <script src="js/articles.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS (Animate On Scroll)
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+      
+      // Log initialization
+      console.log('Writing portfolio page initialized');
+    });
+  </script>
 </body>
 </html>
