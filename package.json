@@ -1,0 +1,19 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio with article thumbnails",
+  "main": "server/fetchThumbnails.js",
+  "scripts": {
+    "fetch-thumbnails": "node server/fetchThumbnails.js",
+    "dev": "live-server"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.11",
+    "fs-extra": "^11.1.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "type": "module"
+}

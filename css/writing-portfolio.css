@@ -24,6 +24,60 @@ body {
     flex-direction: column;
     height: 100%;
     border: 1px solid #e8e0f0;
+    overflow: hidden; /* Ensures thumbnails don't overflow the card */
+}
+
+/* Article Thumbnails */
+.article-card .article-thumbnail {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    background: #f8f9fa;
+}
+
+.article-card .article-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.article-card:hover .article-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Article Logo Overlay */
+.article-card .article-logo {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-card .article-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.article-card .article-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-card:hover {
@@ -178,10 +232,83 @@ body {
     box-shadow: 0 0 0 3px rgba(186, 104, 200, 0.2);
 }
 
+/* Loading and Error States */
+.loading-state,
+.error-state,
+.no-articles {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin: 1rem 0;
+}
+
+.loading-state .spinner,
+.error-state i,
+.no-articles i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #8b5cf6;
+}
+
+.loading-state .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(139, 92, 246, 0.1);
+    border-radius: 50%;
+    border-top-color: #8b5cf6;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-state i {
+    color: #ef4444;
+}
+
+/* Loading state for individual article cards */
+.article-card.loading-thumbnail {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.article-card.loading-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5cf6, #c4b5fd, #8b5cf6);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .articles-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .article-card .article-thumbnail {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-card .article-thumbnail {
+        height: 140px;
     }
 }
 
