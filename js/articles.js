@@ -141,84 +141,112 @@ const articles = [
     title: "The Future of Green Jobs: Non-Traditional Roles in Sustainability and Social Impact",
     link: "https://www.greencareer.ca/whats-new/the-future-of-green-jobs-non-traditional-roles-in-sustainability-and-social-impact/",
     organization: "Green Career Centre",
+    imageUrl: "https://www.greencareer.ca/whats-new/the-future-of-green-jobs-non-traditional-roles-in-sustainability-and-social-impact/",
+    preview: "Explore high-paying, non-traditional green jobs across marketing, finance, tech, psychology, and more—plus how to launch a career in sustainability.",
     tags: ["Sustainability", "Social Impact", "Employment", "Job Market Trends"]
   },
   {
     title: "How to Land a Sustainable Summer Job",
     link: "https://www.greencareer.ca/whats-new/how-to-land-a-sustainable-summer-job/",
     organization: "Green Career Centre",
+    imageUrl: "https://www.greencareer.ca/wp-content/uploads/2022/10/04_04_23-How-to-Land-a-Sustainable-Summer-Job.png",
+    preview: "Discover steps to land a sustainable summer job, from finding green opportunities to resume tips, and networking for climate-impact careers." ,
     tags: ["Career Development", "Job Searching", "Employment", "Sustainability"]
   },
   {
     title: "LinkedIn Sustainability Influencers to Follow in 2022",
     link: "https://www.greencareer.ca/whats-new/linkedin-sustainability-influencers-to-follow-in-2022/",
     organization: "Green Career Centre",
+    imageUrl: "https://www.greencareer.ca/wp-content/uploads/2024/08/ok-1024x616.png",
+    preview: "As the climate crisis intensifies, it’s more important than ever for a just transition towards green careers. Luckily, it’s easy to be inspired to work on climate action with a diverse range of environmentalists, entrepreneurs, activists, intrapreneurs, and community builders who are involved in supporting sustainability efforts. Many of these sustainability influencers have also been outspoken for the environmental sector to be a more inclusive and intersectional place for underrepresented communities. So, if you’re looking for motivation on how to address the climate crisis or want to learn more about sustainability, look no further than these sustainability influencers!",
     tags: ["Networking", "Mentorship", "Sustainability", "Social Media"]
   },
   {
     title: "Green Opportunities Abound: Highlights from the Green Career Fair",
     link: "https://www.greencareer.ca/whats-new/green-opportunities-abound-highlights-from-the-green-career-fair/",
     organization: "Green Career Centre",
+    imageUrl: "https://www.greencareer.ca/wp-content/uploads/2024/12/02_20_23-Green-Opportunities-Abound_-Highlights-from-the-Green-Career-Fair.png",
+    preview: "Explore highlights from the Green Career Fair, where 250+ youth met green employers, won mentorships, and discovered sustainabile careers.",
     tags: ["Networking", "Career Development", "Employment", "Sustainability"]
   },
   {
     title: "Green Careers In-Demand for the Eco-Conscious",
     link: "https://www.greencareer.ca/whats-new/green-careers-in-demand-for-the-eco-conscious/",
     organization: "Green Career Centre",
+    imageUrl: "https://www.greencareer.ca/wp-content/uploads/2022/10/10_31_22-Green-Careers-In-Demand-For-the-Eco-Conscious.png",
+    preview: "Explore high-paying, in-demand green careers for eco-conscious job seekers and learn about how to make an impact.",
     tags: ["Career Development", "Employment", "Sustainability"]
   },
   {
     title: "Guest Post: Investing in Environmental Non-Profits is Essential for a Sustainable Future",
     link: "https://cleartheair.ca/investing-in-environmental-non-profits-is-essential-for-a-sustainable-future/",
     organization: "Green Career Centre + Clean The Air",
+    imageUrl: "https://cleartheair.ca/wp-content/uploads/2023/07/Header-Banner-for-Blog-1024x576.png",
+    preview: "Environmental non-profits are key to a sustainable future, so why are we not funding them accordingly? This guest blog post with Martin from the Green Career Centre illustrates why investing in environmental non-profits is essential for a sustainable future.",
     tags: ["Non-Profits", "Environmental Activism", "Investing", "Sustainability"]
   },
   {
     title: "Amplify Your Sustainability Messaging",
     link: "https://tinyplanet.digital/impact-marketing/how-to-amplify-your-organizations-sustainability-messaging/",
     organization: "Green Career Centre + Tiny Planet Digital",
+    imageUrl: "http://tinyplanet.digital/wp-content/uploads/2023/07/GCC-Blog-Banner-scaled.jpg",
+    preview: "Discover how your organization can amplify its sustainability messaging to promote your green initiatives and reach a wider audience.",
     tags: ["Digital Marketing", "Sustainability"]
   },
   {
     title: "Being Patient with my Future",
     link: "https://apsc.ubc.ca/spotlight/student/martin-edwini-bonsu",
     organization: "Faculty of Applied Science | University of British Columbia",
+    imageUrl: "https://apsc.ubc.ca/sites/default/files/spotlight-images/2022-07/Martin%20Edwini-Bonsu.png",
+    preview: "Chat with Martin “Pursue a passion where you can see real-world benefits and find the most value in your life doing, not for fame, the impressions of others, recognition, or monetary gain.” Martin Edwini-Bonsu Chemical and Biological Engineering Student",
     tags: ["Interview", "Student Life", "Chemical Engineering", "Education", "Mentorship"]
   },
   {
     title: "Bored? Here are some things to spice up your summer",
     link: "https://ubyssey.ca/humour/bored-here-are-things-to-spice-up-your-summer/",
     organization: "The Ubyssey Publications Society (UBC)",
+    imageUrl: "https://storage.googleapis.com/ubyssey/media/renditions/zubair-hirji_4.48.51_pm.2e16d0ba.fill-800x600.jpg",
+    preview: "Since the school year is finally over, you now have time to do all those things that you promised yourself you would during the school year. Talk about best summer ever!",
     tags: ["Productivity", "Wellness", "Student Life"]
   },
   {
     title: "How UBC vloggers are redefining student engagement",
-    link: "https://ubyssey.ca/humour/bored-here-are-things-to-spice-up-your-summer/",
+    link: "https://ubyssey.ca/opinion/letter-lecture-recordings-are-necessary-to-keep-students-learning/",
     organization: "The Ubyssey Publications Society (UBC)",
+    imageUrl: "https://storage.googleapis.com/ubyssey/media/renditions/Screenshot_2022-07-08_at_3.27.49_P.2e16d0ba.fill-800x600.png",
+    preview: "They give advice (or some might say “universi-tea”) that isn’t publicized in student brochures or advertisements.",
     tags: ["Social Media", "Vlogging", "Student Life"]
   },
   {
     title: "Letter: lecture recordings are necessary to keep students learning",
     link: "https://ubyssey.ca/humour/bored-here-are-things-to-spice-up-your-summer/",
     organization: "The Ubyssey Publications Society (UBC)",
+    imageUrl: "https://storage.googleapis.com/ubyssey/media/renditions/20220209_i_falsetti_cirs_lecture_h.2e16d0ba.fill-800x600.jpg",
+    preview: "With the return to full in-person classes, some professors may feel there is no need to record lectures anymore. However, the benefits of recording lectures outweigh the drawbacks for students and professors, making the need for accessibility more necessary to modernize post-secondary education.",
     tags: ["Education", "Academia"]
   },
   {
     title: "Career Pathways in the Forestry Sector",
     link: "https://youngcanadiansforresources.ca/blog/career-pathways-in-the-forestry-sector/",
     organization: "Young Canadians for Resources",
+    imageUrl: "https://youngcanadiansforresources.ca/wp-content/uploads/2024/07/qtq80-h5PzFX.jpeg",
+    preview: "Are you interested in a career in forestry but are not sure which one may be right for you? The Canadian forestry sector has a diverse range of careers spanning from conservation management to wildland firefighting. The following career paths will provide insight into the available types of careers in the forestry sector.",
     tags: ["Forestry", "Career Development", "Industry", "Natural Resources"]
   },
   {
     title: "Top 5 Careers in the Water/Wastewater Industry",
     link: "https://youngcanadiansforresources.ca/blog/top-5-careers-in-the-water-wastewater-industry/",
     organization: "Young Canadians for Resources",
+    imageUrl: "https://youngcanadiansforresources.ca/wp-content/uploads/2024/12/4.png",
+    preview: "To meet the growing water demand, there needs to be spots filled for various types of positions in the water and wastewater industry. Below are my top 5 highlighted career paths in the water and wastewater industry that make an essential impact on water quality and availability in Canada.",
     tags: ["Water and Wastewater", "Industry", "Career Development", "Natural Resources"]
   },
   {
     title: "Empowering Communities: Building a Framework for Equitable Environmental Decision-Making",
     link: "https://celafoundation.ca/empowering-communities-building-a-framework-for-equitable-environmental-decision-making/",
     organization: "Canadian Environmental Law Foundation",
+    imageUrl: "https://i0.wp.com/celafoundation.ca/wp-content/uploads/2019/06/cropped-environmental-law-library-logo-b-e1561054705546.png?fit=561%2C561\u0026ssl=1",
+    preview: "This blog won an award in the TBCG Environmental Advocates writing contest. All content, including any opinions expressed, belong to the author. When it comes to eq…",
     tags: ["Environmental Law", "Community Engagement", "Climate Action"]
   }
 ];
