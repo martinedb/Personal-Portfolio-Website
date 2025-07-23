@@ -62,7 +62,7 @@
     <h2 class="section-subtitle">Academic</h2>
     <div class="projects-grid">
       <!-- Project Card Template -->
-      <div class="project-flip-card" tabindex="0" aria-label="Air Pollution Scientific Poster Project">
+      <div class="project-flip-card" tabindex="0" aria-label="Air Pollution Scientific Poster Project" data-project-id="air-pollution-poster">
         <img src="images/projects/air-pollution.jpg" alt="Air Pollution Research" class="project-cover">
         <div class="project-content">
           <h3 class="project-title">Air Pollution Scientific Poster Project</h3>
@@ -845,6 +845,57 @@
       </div>
     </footer>
   </main>
+  <!-- Project Detail Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img id="modalProjectImage" src="images/projects/default-project.jpg" alt="Project Image" class="modal-project-image">
+          <div class="modal-project-thumbnails" id="projectThumbnails">
+            <!-- Thumbnails will be added here by JavaScript -->
+          </div>
+        </div>
+        <div class="modal-details">
+          <h2 id="modalProjectTitle"></h2>
+          <div class="project-meta">
+            <span id="modalProjectType" class="project-type"></span>
+            <span id="modalProjectDate" class="project-date"></span>
+          </div>
+          
+          <div class="project-section">
+            <h3>Project Objective</h3>
+            <p id="modalProjectObjective"></p>
+          </div>
+          
+          <div class="project-section">
+            <h3>Process</h3>
+            <div id="modalProjectProcess"></div>
+          </div>
+          
+          <div class="project-section">
+            <h3>Results</h3>
+            <div id="modalProjectResults"></div>
+          </div>
+          
+          <div class="project-section">
+            <h3>Technical Skills Gained/Developed</h3>
+            <div id="modalProjectSkills" class="project-skills"></div>
+          </div>
+          
+          <div class="project-links">
+            <a href="#" id="modalProjectLink" class="project-link-btn" target="_blank">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+            <a href="#" id="modalGithubLink" class="project-link-btn primary" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/projects-portfolio.js"></script>
 </body>
 </html>
