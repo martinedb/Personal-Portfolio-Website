@@ -78,7 +78,7 @@ const articles = [
     link: "https://youngcanadiansforresources.ca/blog/top-10-careers-for-chemical-engineering-graduates/",
     organization: "Young Canadians for Resources",
     imageUrl: "https://youngcanadiansforresources.ca/wp-content/uploads/2024/07/YCR-THumb.jpg",
-    preview: "Chemical engineering is a versatile degree that provides access to a wide range of job opportunities to apply the unique skillset and technical knowledge developed through a chemical engineering education. As a chemical engineering graduate, there are a wide range of fields to work in such as bioprocessing, minerals, petrochemicals, process control, and environmental fields.",
+    preview: "Chemical engineering is a versatile degree that provides access to a wide range of job opportunities to apply the unique skillset and technical knowledge developed through a chemical engineering education.",
     tags: ["Chemical Engineering", "Engineering", "Career Development", "Industry", "Natural Resources"]
   },
   {
@@ -110,7 +110,7 @@ const articles = [
     link: "https://youngcanadiansforresources.ca/blog/crafting-success-resources-for-young-canadians-to-fund-a-career-in-trades/",
     organization: "Young Canadians for Resources",
     imageUrl: "https://youngcanadiansforresources.ca/wp-content/uploads/2024/07/YCR-THumb.jpg",
-    preview: "As the cost of attending college continues to outpace inflation and a significantly growing number of college graduates experience a burdensome amount of student loan debt, there have been significant increases in youth enrolling in vocational training programs to pursue trades rather than a college degree. Vocational training programs are significantly less expensive than college degrees, require significantly less time to complete, and offer a strong return on investment. However, financial barriers persist with costs to attend these schools varying widely from $2000 to $18,000 per year.",
+    preview: "As the cost of attending college continues to outpace inflation and a significantly growing number of college graduates experience a burdensome amount of student loan debt, there have been significant increases in youth enrolling in vocational training programs to pursue trades rather than a college degree. ",
     tags: ["Funding", "Grants", "Finance", "Career Development", "Higher Education"]
   },
   {
@@ -141,7 +141,7 @@ const articles = [
     title: "The Future of Green Jobs: Non-Traditional Roles in Sustainability and Social Impact",
     link: "https://www.greencareer.ca/whats-new/the-future-of-green-jobs-non-traditional-roles-in-sustainability-and-social-impact/",
     organization: "Green Career Centre",
-    imageUrl: "https://www.greencareer.ca/whats-new/the-future-of-green-jobs-non-traditional-roles-in-sustainability-and-social-impact/",
+    imageUrl: "https://www.greencareer.ca/wp-content/uploads/2024/12/05_20_23-The-Future-of-Green-Jobs_-Non-Traditional-Roles-in-Sustainability-and-Social-Impact.png",
     preview: "Explore high-paying, non-traditional green jobs across marketing, finance, tech, psychology, and more—plus how to launch a career in sustainability.",
     tags: ["Sustainability", "Social Impact", "Employment", "Job Market Trends"]
   },
@@ -158,7 +158,7 @@ const articles = [
     link: "https://www.greencareer.ca/whats-new/linkedin-sustainability-influencers-to-follow-in-2022/",
     organization: "Green Career Centre",
     imageUrl: "https://www.greencareer.ca/wp-content/uploads/2024/08/ok-1024x616.png",
-    preview: "As the climate crisis intensifies, it’s more important than ever for a just transition towards green careers. Luckily, it’s easy to be inspired to work on climate action with a diverse range of environmentalists, entrepreneurs, activists, intrapreneurs, and community builders who are involved in supporting sustainability efforts. Many of these sustainability influencers have also been outspoken for the environmental sector to be a more inclusive and intersectional place for underrepresented communities. So, if you’re looking for motivation on how to address the climate crisis or want to learn more about sustainability, look no further than these sustainability influencers!",
+    preview: "As the climate crisis intensifies, it’s more important than ever for a just transition towards green careers. Luckily, it’s easy to be inspired to work on climate action with a diverse range of environmentalists, entrepreneurs, activists, intrapreneurs, and community builders who are involved in supporting sustainability efforts. ",
     tags: ["Networking", "Mentorship", "Sustainability", "Social Media"]
   },
   {
@@ -230,7 +230,7 @@ const articles = [
     link: "https://youngcanadiansforresources.ca/blog/career-pathways-in-the-forestry-sector/",
     organization: "Young Canadians for Resources",
     imageUrl: "https://youngcanadiansforresources.ca/wp-content/uploads/2024/07/qtq80-h5PzFX.jpeg",
-    preview: "Are you interested in a career in forestry but are not sure which one may be right for you? The Canadian forestry sector has a diverse range of careers spanning from conservation management to wildland firefighting. The following career paths will provide insight into the available types of careers in the forestry sector.",
+    preview: "Are you interested in a career in forestry but are not sure which one may be right for you? The Canadian forestry sector has a diverse range of careers spanning from conservation management to wildland firefighting.",
     tags: ["Forestry", "Career Development", "Industry", "Natural Resources"]
   },
   {
