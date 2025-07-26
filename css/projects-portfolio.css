@@ -1,11 +1,13 @@
 /* projects-portfolio.css - Modern Notion-style gallery layout with modal */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
-  margin: 2.5rem auto;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3.5rem 2.5rem;
+  margin: 3rem auto;
   max-width: 1400px;
-  padding: 0 2rem;
+  padding: 0 3rem 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .project-flip-card {
@@ -18,6 +20,9 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
 }
 
 .project-flip-card:hover {

@@ -20,14 +20,15 @@
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin: 2.5rem 0;
-  padding: 1rem 0;
+  gap: 3rem 2rem;
+  margin: 3rem 0;
+  padding: 1.5rem 0;
 }
 
 .work-flip-card {
   background: none;
   border: none;
+  margin-bottom: 1.5rem;
   perspective: 1200px;
   width: 100%;
   min-height: 280px;
