@@ -50,6 +50,28 @@
   flex-grow: 1;
 }
 
+.company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  height: 80px;
+}
+
+.company-logo img {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(30%) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.work-card:hover .company-logo img {
+  filter: grayscale(0%) contrast(1);
+}
+
 .work-details {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
