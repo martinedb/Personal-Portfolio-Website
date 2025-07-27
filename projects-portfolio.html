@@ -638,6 +638,12 @@
             <a href="#" class="project-link-btn primary" target="_blank">
               <i class="fas fa-file-pdf"></i> Report
             </a>
+            <button class="project-link-btn" onclick="openPosterModal('images/project-images/pfd-PHB-project.png')">
+              <i class="fas fa-project-diagram"></i> Process Flow
+            </button>
+            <button class="project-link-btn" onclick="openPosterModal('images/project-images/reactor-schematic-PHB-project.png')">
+              <i class="fas fa-cogs"></i> Reactor
+            </button>
           </div>
         </div>
       </div>
@@ -763,7 +769,7 @@
       <!-- 2022-2023 Academic Year -->
       <!-- Acetone Design Manufacturing Project -->
       <div class="project-card" tabindex="0" aria-label="Acetone Design Manufacturing Project">
-        <img src="images/project-images/pfd-acetone-image.png" alt="Acetone Manufacturing Process" class="project-cover">
+        <img src="images/project-images/acetone-cover-image.png" alt="Acetone Manufacturing Process" class="project-cover">
         <div class="project-content">
           <h3 class="project-title">Acetone Design Manufacturing Project (CHBE 221)</h3>
           <div class="project-subtitle">
@@ -793,9 +799,9 @@
             <a href="#" class="project-link-btn" target="_blank">
               <i class="fas fa-file-alt"></i> View Report
             </a>
-            <a href="#" class="project-link-btn primary" target="_blank">
+            <button class="project-link-btn primary" onclick="openPosterModal('images/project-images/pfd-acetone-image.png')">
               <i class="fas fa-project-diagram"></i> View Process Flow
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -979,7 +985,7 @@
     <div class="projects-grid">
       <!-- Progressione -->
       <div class="project-card" tabindex="0" aria-label="Progressione">
-        <img src="images/projects/progressione.jpg" alt="Progressione Website" class="project-cover">
+        <img src="images/project-images/progressione-logo.png" alt="Progressione Website" class="project-cover">
         <div class="project-content">
           <h3 class="project-title">Progressione</h3>
           <div class="project-subtitle">
@@ -1001,6 +1007,12 @@
         </div>
       </div>
    
+  <!-- The Modal -->
+  <div id="posterModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="posterImage">
+  </div>
+
   <script>
     // Function to open the poster modal
     function openPosterModal(imageSrc) {
@@ -1009,17 +1021,20 @@
       
       modal.style.display = 'block';
       modalImg.src = imageSrc;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
       
       // Close modal when clicking the close button
       const closeBtn = modal.querySelector('.close-modal');
       closeBtn.onclick = function() {
         modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
       };
       
       // Close modal when clicking outside the image
       window.onclick = function(event) {
         if (event.target === modal) {
           modal.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Re-enable scrolling
         }
       };
     }
@@ -1029,6 +1044,7 @@
       const modal = document.getElementById('posterModal');
       if (event.key === 'Escape' && modal.style.display === 'block') {
         modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
       }
     });
   </script>
