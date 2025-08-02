@@ -1,5 +1,9 @@
 /* projects-portfolio.css - Modern Notion-style gallery layout with modal */
 
+.projects-portfolio-title {
+  margin-top: 2rem;
+}
+
 /* Modal styles */
 .modal {
   display: none;

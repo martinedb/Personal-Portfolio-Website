@@ -5,11 +5,13 @@
   "main": "server/fetchThumbnails.js",
   "scripts": {
     "fetch-thumbnails": "node server/fetchThumbnails.js",
+    "organize": "node scripts/organize-by-date.js",
     "dev": "live-server"
   },
   "dependencies": {
-    "node-fetch": "^2.6.11",
+    "cheerio": "^1.1.2",
     "fs-extra": "^11.1.1",
+    "node-fetch": "^2.6.11",
     "path": "^0.12.7"
   },
   "devDependencies": {
