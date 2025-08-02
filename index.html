@@ -25,6 +25,7 @@
   <script defer src="js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script defer src="js/scroll-handler.js"></script>
+  <script defer src="js/typewriter.js"></script>
 
 </head>
 
@@ -77,55 +78,63 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero" data-aos="fade-in">
-    <div class="logo" tabindex="0">MARTIN EDWINI-BONSU</div>
-    <h1 tabindex="0">Martin’s Portfolio</h1>
-    <p tabindex="0">
-      UBC Chemical Engineering Student | Urban Water and Wastewater Treatment Co-op Student | Data Analyst |
-      Engineering Ambassador | CHBE Student Representative | Writer
-    </p>
-    <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
-    <div class="hero-buttons">
-      <a href="assets/martin_eb_resume_riipen.pdf" class="hero-btn" download>
-        <i class="fas fa-file-download"></i> Download Resume
-      </a>
-      <a href="#projects" class="hero-btn">
-        <i class="fas fa-folder-open"></i> View Projects
-      </a>
-    </div>
-  </section>
+  <!-- Hero and About Section -->
+  <div class="hero-about-container">
+    <!-- Hero Section -->
+    <section id="home" class="hero" data-aos="fade-in">
+      <div class="logo-container" tabindex="0">
+        <div class="logo" id="animated-name"></div>
+        <span class="cursor">|</span>
+      </div>
+      <h1 tabindex="0">Martin's Portfolio</h1>
+      <p tabindex="0">
+        UBC Chemical Engineering Student | Urban Water and Wastewater Treatment Co-op Student | Data Analyst |
+        Engineering Ambassador | CHBE Student Representative | Writer
+      </p>
+      <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
+      <div class="hero-buttons">
+        <a href="assets/martin_eb_resume_riipen.pdf" class="hero-btn" download>
+          <i class="fas fa-file-download"></i> Download Resume
+        </a>
+        <a href="#projects" class="hero-btn">
+          <i class="fas fa-folder-open"></i> View Projects
+        </a>
+      </div>
+    </section>
+
+    <!-- Vertical Divider -->
+    <div class="vertical-divider"></div>
+
+    <!-- About Me -->
+    <section id="about" class="about-section" data-aos="fade-up" tabindex="0">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Hello! I'm Martin Edwini-Bonsu, a 5th-year Chemical and Biological Engineering student at the University of British Columbia with a passion for sustainability, clean water systems, and pollution control. 
+        
+        <br>
+        <br>
+        I'm currently completing a 16-month co-op with Associated Engineering, where I work on water and wastewater treatment design projects that range from chemical dosing systems to lagoon upgrades and energy audits.
+
+        <br>
+        <br>
+        
+        I have a diverse range of work experiences. I've worked with sustainability-focused nonprofits and innovative startups to build career resources, manage digital platforms, develop tools like carbon footprint calculators, and create collaborative research databases for climate science.
+
+        <br>
+        <br>
+        
+        When I'm not working, I enjoy cross-country running, learning about personal finance, cycling, working out at the gym, and creative writing (e.g. poetry, articles, and short stories). I bring curiosity, systems thinking, and people-centered design to everything I do.
+      </p>
+    </section>
+  </div>
 
   <!-- Scroll Prompt -->
   <section class="scroll-callout" data-aos="fade-up">
-  
-  <!-- Footer -->
     <p>↓ Scroll to explore more</p>
   </section>
 
   <!-- Main Content -->
   <main>
-    <!-- About Me -->
-    <section id="about" data-aos="fade-up" tabindex="0">
-      <h2 class="section-title">About Me</h2>
-      <p>
-      Hello! I’m Martin Edwini-Bonsu, a 5th-year Chemical and Biological Engineering student at the University of British Columbia with a passion for sustainability, clean water systems, and pollution control. 
-      
-      <br>
-      <br>
-      I’m currently completing a 16-month co-op with Associated Engineering, where I work on water and wastewater treatment design projects that range from chemical dosing systems to lagoon upgrades and energy audits.
-
-      <br>
-      <br>
-      
-      I have a diverse range of work experiences. I’ve worked with sustainability-focused nonprofits and innovative startups to build career resources, manage digital platforms, develop tools like carbon footprint calculators, and create collaborative research databases for climate science.
-
-      <br>
-      <br>
-      
-      When I’m not working, I enjoy cross-country running, learning about personal finance, cycling, working out at the gym, and creative writing (e.g. poetry, articles, and short stories). I bring curiosity, systems thinking, and people-centered design to everything I do.
-      </p>
-    </section>
 
     <!-- Career Interests & Current Activities (Enhanced) -->
     <section class="interests-activities-section" data-aos="fade-up" tabindex="0">
@@ -213,11 +222,11 @@
         <div class="skill-category">
           <h3><i class="fas fa-industry"></i> Process Engineering</h3>
           <ul>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Material and Energy Balances <span class="skill-badge skill-advanced">Advanced</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Water and Wastewater Treatment Design <span class="skill-badge skill-proficient">Proficient</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Process Safety and Risk Management <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Piping and Instrumentation Diagrams (P&IDs) <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Fluid Mechanics <span class="skill-badge skill-advanced">Advanced</span></li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Material and Energy Balances</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Water and Wastewater Treatment Design</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Process Safety and Risk Management</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Piping and Instrumentation Diagrams (P&IDs)</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Fluid Mechanics</li>
           </ul>
         </div>
 
@@ -225,11 +234,11 @@
         <div class="skill-category">
           <h3><i class="fas fa-flask"></i> Laboratory Techniques</h3>
           <ul>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Gas Chromatography <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Spectrophotometry <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Titration <span class="skill-badge skill-proficient">Proficient</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Manometry <span class="skill-badge skill-basic">Basic</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Experimental Methodology Design <span class="skill-badge skill-advanced">Advanced</span></li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Gas Chromatography</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Spectrophotometry</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Titration</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Manometry</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Experimental Methodology Design</li>
           </ul>
         </div>
 
@@ -237,14 +246,14 @@
         <div class="skill-category">
           <h3><i class="fas fa-code"></i> Programming & Software</h3>
           <ul>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Python <span class="skill-badge skill-proficient">Proficient</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> R Programming <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> VBA Excel + Office Scripts <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> JavaScript + HTML/CSS <span class="skill-badge skill-proficient">Proficient</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Markdown <span class="skill-badge skill-advanced">Advanced</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> LaTeX <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> PowerBI <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Microsoft Office <span class="skill-badge skill-expert">Expert</span></li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Python</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> R Programming</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> VBA Excel + Office Scripts</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> JavaScript + HTML/CSS</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Markdown</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> LaTeX</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> PowerBI</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Microsoft Office</li>
           </ul>
         </div>
 
@@ -252,9 +261,9 @@
         <div class="skill-category">
           <h3><i class="fas fa-desktop"></i> Simulation & CAD</h3>
           <ul>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> AspenPLUS <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> AutoCAD (General + Plant 3D) <span class="skill-badge skill-basic">Basic</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> SOLIDWORKS <span class="skill-badge skill-basic">Basic</span></li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> AspenPLUS</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> AutoCAD (General + Plant 3D)</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> SOLIDWORKS</li>
           </ul>
         </div>
 
@@ -262,11 +271,11 @@
         <div class="skill-category">
           <h3><i class="fas fa-lightbulb"></i> Other</h3>
           <ul>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Project Management <span class="skill-badge skill-proficient">Proficient</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Procurement <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Information and Database Management <span class="skill-badge skill-intermediate">Intermediate</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Data Analysis <span class="skill-badge skill-advanced">Advanced</span></li>
-            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Program Development and Coordination <span class="skill-badge skill-proficient">Proficient</span></li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Project Management</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Procurement</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Information and Database Management</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Data Analysis</li>
+            <li><span class="skill-icon"><i class="fas fa-circle"></i></span> Program Development and Coordination</li>
           </ul>
         </div>
 
