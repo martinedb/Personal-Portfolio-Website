@@ -56,23 +56,12 @@
     <nav class="navbar">
       <ul class="navbar-links">
         <li><a href="#home">Home</a></li>
-        <li class="dropdown">
-          <a href="#about" class="dropbtn">About</a>
-          <div class="dropdown-content">
-            <a href="#skills">Skills</a>
-            <a href="#current-activities">Activities</a>
-            <a href="#career-interests">Interests</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#experience" class="dropbtn">Work</a>
-          <div class="dropdown-content">
-            <a href="work-experience.html">Experience</a>
-            <a href="projects-portfolio.html">Projects</a>
-            <a href="writing-portfolio.html">Articles</a>
-          </div>
-        </li>
-        <li><a href="#awards">Awards</a></li>
+        <li><a href="work-experience.html">Experience</a></li>
+        <li><a href="projects-portfolio.html">Projects</a></li>
+        <li><a href="writing-portfolio.html">Articles</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#interests-activities">Interests & Activities</a></li>
+        <li><a href="index.html#awards">Awards</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -93,11 +82,11 @@
       </p>
       <button id="darkToggle" aria-pressed="false" aria-label="Toggle dark mode" type="button">Toggle Dark Mode</button>
       <div class="hero-buttons">
-        <a href="assets/martin_eb_resume_riipen.pdf" class="hero-btn" download>
-          <i class="fas fa-file-download"></i> Download Resume
+        <a href="assets/martin_eb_resume_riipen.pdf" class="hero-btn" target="_blank" rel="noopener">
+          <i class="fas fa-file-alt"></i> View Resume
         </a>
         <a href="#projects" class="hero-btn">
-          <i class="fas fa-folder-open"></i> View Projects
+          <i class="fas fa-folder-open"></i> View Featured Projects
         </a>
       </div>
     </section>
@@ -130,18 +119,22 @@
 
   <!-- Scroll Prompt -->
   <section class="scroll-callout" data-aos="fade-up">
-    <p>↓ Scroll to explore more</p>
+    <div class="scroll-callout-content">
+      <i class="fas fa-chevron-down"></i>
+      <span>Scroll to explore more</span>
+    </div>
   </section>
 
   <!-- Main Content -->
   <main>
 
-    <!-- Career Interests & Current Activities (Enhanced) -->
-    <section class="interests-activities-section" data-aos="fade-up" tabindex="0">
+    <!-- Interests & Activities Section -->
+    <section id="interests-activities" class="interests-activities-section" data-aos="fade-up" tabindex="0">
+      <h2 class="section-title">Interests & Activities</h2>
       <div class="interests-activities-container">
-        <!-- Career Interests -->
-        <div id="career-interests" class="interests-activities-column">
-          <h2 class="section-title">Career Interests</h2>
+        <!-- Career Interests Column -->
+        <div class="interests-activities-column">
+          <h3 class="subsection-title">Career Interests</h3>
           <div class="card-list">
             <div class="interest-card" data-aos="zoom-in"><i class="fas fa-tint"></i> Water & Wastewater Treatment</div>
             <div class="interest-card" data-aos="zoom-in"><i class="fas fa-leaf"></i> Green Engineering</div>
@@ -153,14 +146,14 @@
         </div>
         <!-- Divider -->
         <div class="divider-vertical" aria-hidden="true"></div>
-        <!-- Current Activities -->
-        <div id="current-activities" class="interests-activities-column">
-          <h2 class="section-title">Current Activities</h2>
+        <!-- Current Activities Column -->
+        <div class="interests-activities-column">
+          <h3 class="subsection-title">Current Activities</h3>
           <div class="card-list">
             <div class="interest-card" data-aos="zoom-in"><i class="fas fa-drafting-compass"></i> Learning AutoCAD (General & Plant 3D)</div>
             <div class="interest-card" data-aos="zoom-in"><i class="fas fa-chart-pie"></i> Learning PowerBI</div>
             <div class="interest-card" data-aos="zoom-in"><i class="fas fa-coins"></i> Learning personal finance</div>
-            <div class="interest-card" data-aos="zoom-in"><i class="fas fa-globe-americas"></i> Creating a website for Chemical Engineeering resources</div>
+            <div class="interest-card" data-aos="zoom-in"><i class="fas fa-globe-americas"></i> Creating a website for Chemical Engineering resources</div>
             <div class="interest-card" data-aos="zoom-in"><i class="fab fa-github"></i> Uploading coding projects to GitHub</div>
           </div>
         </div>
@@ -206,7 +199,7 @@
         </div>
       </div>
       <div class="projects-btn-row">
-        <a href="https://github.com/martinedb?tab=repositories" target="_blank" class="hero-btn projects-btn">
+        <a href="https://github.com/martinedb?tab=repositories" target="_blank" rel="noopener" class="hero-btn projects-btn">
           <i class="fas fa-arrow-right"></i> See More Projects
         </a>
       </div>

@@ -138,12 +138,12 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: #333;
+  color: #000; /* Darkened from #333 for better contrast */
 }
 
 .project-subtitle {
   font-size: 0.9rem;
-  color: #666;
+  color: #333; /* Darkened from #666 for better contrast */
   margin: 0 0 1rem 0;
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@
   margin: 1rem 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #444;
+  color: #000000; /* Changed from #444 to black for better visibility */
   flex-grow: 1;
 }
 
@@ -167,6 +167,7 @@
   margin-bottom: 0.7rem;
   position: relative;
   padding-left: 0.5rem;
+  color: #000000; /* Ensures list item text is black */
 }
 
 .achievements-list li::before {
