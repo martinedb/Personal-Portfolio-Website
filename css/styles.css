@@ -44,10 +44,12 @@
 .hero {
   flex: 1;
   max-width: 45%;
-  padding: 2rem;
+  padding: 2.5rem 1.5rem 2rem; /* Adjusted top padding */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start; /* Align to top */
+  margin-top: 1rem; /* Fine-tune vertical position */
 }
 
 .about-section {
@@ -581,6 +583,35 @@ h1, h2, h3, h4, h5, h6 {
   --heading-color: #ffffff;
   --accent: #BA68C8;
   --bg-color: #121212;
+  --header-height: 70px; /* Height of your fixed header */
+}
+
+/* Add scroll padding to account for fixed header */
+html {
+  scroll-padding-top: calc(var(--header-height) + 20px); /* Header height + some extra space */
+  scroll-behavior: smooth;
+}
+
+/* Ensure section headings are visible when navigated to */
+:target::before {
+  content: "";
+  display: block;
+  height: calc(var(--header-height) + 20px);
+  margin: calc(-1 * (var(--header-height) + 20px)) 0 0;
+  visibility: hidden;
+}
+
+/* Specific section spacing */
+#skills,
+#awards,
+#interests-activities {
+  scroll-margin-top: calc(var(--header-height) + 20px);
+  padding-top: 2rem;
+}
+
+/* For smooth scrolling */
+html {
+  scroll-snap-type: y proximity;
 }
 
 /* Light mode adjustments */
@@ -620,11 +651,47 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 600px;
+.hero .hero-roles {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem 0;
+}
+
+.roles-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.roles-list li {
+  font-size: 1.3rem; /* Edit this value to change the font size */
+  color: #000000; /* Changed to black */
+  line-height: 1.6;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 3px solid var(--accent);
+}
+
+.roles-list li:hover {
+  background: rgba(186, 104, 200, 0.1);
+  transform: translateX(5px);
+}
+
+.roles-list li strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .roles-list li {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
 
 #darkToggle {
