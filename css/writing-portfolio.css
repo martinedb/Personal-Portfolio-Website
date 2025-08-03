@@ -129,6 +129,13 @@ body {
     margin: 0.8rem 0;
 }
 
+.article-preview {
+    color: #333;
+    margin: 0.8rem 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 .article-tags .tag {
     background: #f0e5ff;
     color: #6a1b9a;
