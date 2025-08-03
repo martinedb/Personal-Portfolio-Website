@@ -2,6 +2,64 @@
 
 .projects-portfolio-title {
   margin-top: 2rem;
+  color: #9f7aea; /* Magenta color to match the theme */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Section subtitles */
+.section-subtitle {
+  font-size: 2.1rem; /* Increased by 40% from 1.5rem */
+  color: #2d3748;
+  margin: 4rem 0 1.5rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #9f7aea; /* Magenta underline */
+  display: inline-block;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* Project meta info (location, duration) */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.75rem 0 1.5rem 0;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.project-location,
+.project-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  padding: 0.25rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+.project-location:before {
+  content: '\f3c5';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 6px;
+  font-size: 0.9em;
+  color: #9f7aea;
+}
+
+.project-duration:before {
+  content: '\f017';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 6px;
+  font-size: 0.9em;
+  color: #9f7aea;
 }
 
 /* Modal styles */
@@ -128,17 +186,17 @@
 }
 
 .project-content {
-  padding: 1.5rem;
+  padding: 1.8rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .project-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
   margin: 0 0 0.5rem 0;
-  color: #000; /* Darkened from #333 for better contrast */
+  color: #2d3748;
+  font-weight: 700;
 }
 
 .project-subtitle {
