@@ -288,6 +288,22 @@
   z-index: 1;
 }
 
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+/* Portfolio title styling */
+.section-title {
+  color: #BA68C8; /* Magenta color to match the theme */
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 .project-card {
   background: white;
   border-radius: 10px;

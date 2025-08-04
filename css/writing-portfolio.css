@@ -5,6 +5,15 @@ body {
     color: #333;
 }
 
+/* Portfolio title styling */
+.section-title {
+    color: #9f7aea; /* Magenta color to match the theme */
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
 /* --- Main Container --- */
 .articles-container {
     display: grid;

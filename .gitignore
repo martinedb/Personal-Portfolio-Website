@@ -1,6 +1,9 @@
 # Ignore environment variables and sensitive files
 .env
 custom-instructions.md
+prompts.md
+work-experience-data.md
+writing-portfolio-data.md
 
 # Node modules
 node_modules/
