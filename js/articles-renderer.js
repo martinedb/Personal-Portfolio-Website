@@ -64,14 +64,17 @@ function renderArticles(filterTag = null, searchQuery = '') {
     const matchesTag = !filterTag || 
                       filterTag === 'all' || 
                       article.tags.some(tag => 
-                        tag.toLowerCase() === filterTag.toLowerCase()
+                        tag.toLowerCase() === filterTag.toLowerCase() ||
+                        tag.toLowerCase().includes(filterTag.toLowerCase())
                       );
     
+    const searchLower = searchQuery.toLowerCase();
     const matchesSearch = !searchQuery || 
-                         article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.organization.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         article.title.toLowerCase().includes(searchLower) ||
+                         article.organization.toLowerCase().includes(searchLower) ||
+                         (article.preview && article.preview.toLowerCase().includes(searchLower)) ||
                          article.tags.some(tag => 
-                           tag.toLowerCase().includes(searchQuery.toLowerCase())
+                           tag.toLowerCase().includes(searchLower)
                          );
     
     return matchesTag && matchesSearch;
@@ -117,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderArticles();
 
   // Set up tag filter buttons
-  const tagButtons = document.querySelectorAll('.tag-filter');
+  const tagButtons = document.querySelectorAll('.filter-btn');
   tagButtons.forEach(button => {
     button.addEventListener('click', () => {
       const tag = button.dataset.tag;
@@ -130,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set up search functionality
-  const searchInput = document.querySelector('.search-input');
+  const searchInput = document.getElementById('article-search');
   if (searchInput) {
     let searchTimeout;
     
@@ -141,23 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       searchTimeout = setTimeout(() => {
         renderArticles(null, query);
       }, 300);
-    });
-  }
-
-  // Set up "All" button
-  const allButton = document.querySelector('[data-tag="all"]');
-  if (allButton) {
-    allButton.addEventListener('click', () => {
-      renderArticles();
-      
-      // Update active state
-      tagButtons.forEach(btn => btn.classList.remove('active'));
-      allButton.classList.add('active');
-      
-      // Clear search
-      if (searchInput) {
-        searchInput.value = '';
-      }
     });
   }
 });
