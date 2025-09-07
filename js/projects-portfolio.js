@@ -1,72 +1,14 @@
-// projects-portfolio.js - Project card and modal functionality with collapsible bullet points
+// projects-portfolio.js - Project card and modal functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize collapsible bullet points
-  function initCollapsibleBullets() {
-    document.querySelectorAll('.project-card').forEach(card => {
-      const list = card.querySelector('.achievements-list');
-      if (!list) return;
-      
-      const items = Array.from(list.querySelectorAll('li'));
-      if (items.length <= 1) return; // No need for collapsible if only one item
-      
-      // Hide all items except first
-      items.forEach((item, index) => {
-        if (index > 0) {
-          item.classList.add('collapsed');
-        }
-      });
-      
-      // Create and insert toggle button if it doesn't exist
-      if (!card.querySelector('.view-more-btn')) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'view-more-btn';
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        toggleBtn.setAttribute('aria-label', 'Toggle project details');
-        
-        const toggleText = document.createElement('span');
-        toggleText.textContent = 'View more';
-        
-        const toggleIcon = document.createElement('i');
-        toggleIcon.className = 'fas fa-chevron-down';
-        toggleIcon.setAttribute('aria-hidden', 'true');
-        
-        toggleBtn.appendChild(toggleText);
-        toggleBtn.appendChild(document.createTextNode(' '));
-        toggleBtn.appendChild(toggleIcon);
-        
-        // Insert after the list
-        list.parentNode.insertBefore(toggleBtn, list.nextSibling);
-        
-        // Add click handler
-        toggleBtn.addEventListener('click', function() {
-          const isExpanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', !isExpanded);
-          
-          // Toggle all items except first
-          items.forEach((item, index) => {
-            if (index > 0) {
-              item.classList.toggle('collapsed', isExpanded);
-            }
-          });
-          
-          // Update button text and icon
-          toggleText.textContent = isExpanded ? 'View more' : 'View less';
-          toggleIcon.className = isExpanded ? 'fas fa-chevron-down' : 'fas fa-chevron-up';
-          
-          // Smooth scroll to show the expanded content
-          if (!isExpanded) {
-            setTimeout(() => {
-              toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
-          }
-        });
-      }
-    });
-  }
+  // Remove any existing view more buttons
+  document.querySelectorAll('.view-more-btn').forEach(btn => btn.remove());
   
-  // Initialize collapsible bullets
-  initCollapsibleBullets();
+  // Make sure all list items are visible
+  document.querySelectorAll('.achievements-list li.collapsed').forEach(item => {
+    item.classList.remove('collapsed');
+  });
+  
   // Get the modal element
   const modal = document.getElementById('projectModal');
   const modalTitle = document.getElementById('modalProjectTitle');
