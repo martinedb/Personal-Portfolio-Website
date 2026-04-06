@@ -120,11 +120,13 @@ class ModalManager {
   
   openModal(modal) {
     // Save scroll position
-    this.scrollPosition = window.scrollY;
+    this.scrollPosition = window.scrollY || document.documentElement.scrollTop;
     
-    // Add class to body to prevent scrolling
-    this.body.classList.add('modal-open');
+    // Add class to body to prevent scrolling and fix position
+    this.body.style.overflow = 'hidden';
+    this.body.style.position = 'fixed';
     this.body.style.top = `-${this.scrollPosition}px`;
+    this.body.style.width = '100%';
     
     // Show the modal
     modal.classList.add('active');
@@ -143,8 +145,10 @@ class ModalManager {
     modal.classList.remove('active');
     
     // Restore body scroll
-    this.body.classList.remove('modal-open');
+    this.body.style.overflow = '';
+    this.body.style.position = '';
     this.body.style.top = '';
+    this.body.style.width = '';
     window.scrollTo(0, this.scrollPosition);
     
     // Update ARIA attributes

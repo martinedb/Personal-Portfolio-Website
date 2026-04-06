@@ -419,10 +419,20 @@
 }
 :root {
   --bg-gradient: linear-gradient(to right, #fce4ec, #e1f5fe);
+  --bg-light: #f8f9fa;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-section: rgba(255, 255, 255, 0.95);
   --accent: #ba68c8;
   --highlight: #7b1fa2;
+  --accent-hover: #8e24aa;
   --text-dark: #3e3e3e;
   --text-light: #6f6f6f;
+  --text-muted: #666666;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #f8f9fa;
 }
 
 body {
@@ -447,9 +457,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  background: var(--bg-gradient);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: var(--header-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px var(--shadow-color);
   z-index: 1000;
+  transition: background 0.3s ease;
 }
 
 .site-name {
@@ -767,10 +780,20 @@ main {
 /* === Dark Mode Variables === */
 .dark-mode {
   --bg-gradient: linear-gradient(to right, #1a1a2e, #16213e);
+  --bg-light: #2d2d44;
+  --bg-card: rgba(45, 45, 68, 0.8);
+  --bg-section: rgba(26, 26, 46, 0.9);
   --accent: #bb86fc;
   --highlight: #bb86fc;
-  --text-dark: #eee;
-  --text-light: #bbb;
+  --accent-hover: #8b5cf6;
+  --text-dark: #ffffff;
+  --text-light: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --card-bg: rgba(45, 45, 68, 0.6);
+  --header-bg: rgba(26, 26, 46, 0.95);
+  --footer-bg: #1a1a2e;
 }
 
 /* --- Enhanced Interests & Activities Section --- */
